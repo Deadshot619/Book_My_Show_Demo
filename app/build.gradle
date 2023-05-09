@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.bookmyshowdemo'
+    compileSdk ConfigData.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.example.bookmyshowdemo"
+        minSdk ConfigData.minSdkVersion
+        targetSdk ConfigData.targetSdkVersion
+        versionCode ConfigData.versionCode
+        versionName ConfigData.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = ConfigData.jvmTarget
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+
+    implementation project(":common")
+
+    implementation Deps.core
+    implementation Deps.lifecycle
+    implementation Deps.appCompat
+    implementation Deps.material
+    implementation Deps.constraintLayout
+    testImplementation Deps.junit
+    androidTestImplementation Deps.androidTestJUnit
+    androidTestImplementation Deps.androidTestEspresso
+}
