@@ -1,9 +1,12 @@
+import org.gradle.api.JavaVersion
+
 object Versions {
     const val core = "1.10.0"
     const val lifecycle = "2.6.1"
     const val appCompat = "1.6.1"
     const val material = "1.9.0"
     const val constraintLayout = "2.1.4"
+    const val hilt = "2.44"
 
     const val junit = "4.13.2"
     const val androidTestJUnit = "1.1.5"
@@ -16,7 +19,9 @@ object ConfigData {
     const val targetSdkVersion = 33
     const val versionCode = 1
     const val versionName = "1.0"
-    const val jvmTarget = "1.8"
+    const val jvmTarget = "17"
+    val sourceCompatibilityVersion = JavaVersion.VERSION_17
+    val targetCompatibilityVersion = JavaVersion.VERSION_17
 }
 
 object Deps {
@@ -29,4 +34,9 @@ object Deps {
     const val junit = "junit:junit:${Versions.junit}"
     const val androidTestJUnit = "androidx.test.ext:junit:${Versions.androidTestJUnit}"
     const val androidTestEspresso = "androidx.test.espresso:espresso-core:${Versions.androidTestEspresso}"
+}
+
+object Hilt {
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+    const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
 }

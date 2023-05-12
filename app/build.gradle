@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -27,8 +29,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility ConfigData.INSTANCE.sourceCompatibilityVersion
+        targetCompatibility ConfigData.INSTANCE.targetCompatibilityVersion
     }
     kotlinOptions {
         jvmTarget = ConfigData.jvmTarget
@@ -44,6 +46,11 @@ android {
     }
 }
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
+}
+
 dependencies {
 
     implementation project(":common")
@@ -56,4 +63,7 @@ dependencies {
     testImplementation Deps.junit
     androidTestImplementation Deps.androidTestJUnit
     androidTestImplementation Deps.androidTestEspresso
+
+    implementation Hilt.hilt
+    kapt Hilt.hiltCompiler
 }
