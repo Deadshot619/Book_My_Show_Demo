@@ -11,6 +11,14 @@ object Versions {
     const val junit = "4.13.2"
     const val androidTestJUnit = "1.1.5"
     const val androidTestEspresso = "3.5.1"
+
+    const val retrofit = "2.9.0"
+    const val gsonConvertor = "2.9.0"
+    const val okHttp = "4.9.0"
+
+    const val coroutines = "1.6.1"
+
+    const val glide = "4.12.0"
 }
 
 object ConfigData {
@@ -39,4 +47,22 @@ object Deps {
 object Hilt {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
+}
+
+object Retrofit {
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val gsonConvertor = "com.squareup.retrofit2:converter-gson:${Versions.gsonConvertor}"
+    const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
+}
+
+object Coroutines {
+    const val coroutineCore =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val coroutineAndroid =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+}
+
+object Glide {
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val annotationProcessor = "com.github.bumptech.glide:compiler:${Versions.glide}"
 }

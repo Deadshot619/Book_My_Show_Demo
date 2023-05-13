@@ -34,6 +34,8 @@ android {
 
 dependencies {
 
+    implementation project(":common")
+
     implementation Deps.core
     implementation Deps.lifecycle
     implementation Deps.appCompat
@@ -46,4 +48,9 @@ dependencies {
     //Hilt
     implementation Hilt.hilt
     kapt Hilt.hiltCompiler
+
+    //Retrofit
+    implementation Retrofit.retrofit
+    implementation Retrofit.gsonConvertor
+    implementation Retrofit.okHttp
 }

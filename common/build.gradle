@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -40,4 +42,14 @@ dependencies {
     testImplementation Deps.junit
     androidTestImplementation Deps.androidTestJUnit
     androidTestImplementation Deps.androidTestEspresso
+
+    //Hilt
+    implementation Hilt.hilt
+    kapt Hilt.hiltCompiler
+
+
+    //Retrofit
+    implementation Retrofit.retrofit
+    implementation Retrofit.gsonConvertor
+    implementation Retrofit.okHttp
 }

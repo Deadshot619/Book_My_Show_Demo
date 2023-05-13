@@ -34,11 +34,10 @@ android {
 
 dependencies {
 
+    implementation project(":common")
+    implementation project(":showTimes:showTimes_domain")
+
     implementation Deps.core
-    implementation Deps.lifecycle
-    implementation Deps.appCompat
-    implementation Deps.material
-    implementation Deps.constraintLayout
     testImplementation Deps.junit
     androidTestImplementation Deps.androidTestJUnit
     androidTestImplementation Deps.androidTestEspresso
@@ -46,4 +45,9 @@ dependencies {
     //Hilt
     implementation Hilt.hilt
     kapt Hilt.hiltCompiler
+
+    //Retrofit
+    implementation Retrofit.retrofit
+    implementation Retrofit.gsonConvertor
+    implementation Retrofit.okHttp
 }
