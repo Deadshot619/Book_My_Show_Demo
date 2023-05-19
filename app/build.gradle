@@ -54,6 +54,9 @@ kapt {
 dependencies {
 
     implementation project(":common")
+    implementation project(":showTimes:showTimes_presentation")
+    implementation project(":showTimes:showTimes_data")
+    implementation project(":showTimes:showTimes_domain")
 
     implementation Deps.core
     implementation Deps.lifecycle

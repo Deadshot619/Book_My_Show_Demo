@@ -52,4 +52,6 @@ dependencies {
     implementation Retrofit.retrofit
     implementation Retrofit.gsonConvertor
     implementation Retrofit.okHttp
+
+    debugImplementation Chucker.chuckerDebug
 }

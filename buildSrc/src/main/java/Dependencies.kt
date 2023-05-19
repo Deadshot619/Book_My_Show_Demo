@@ -8,6 +8,8 @@ object Versions {
     const val constraintLayout = "2.1.4"
     const val hilt = "2.44"
 
+    const val viewModelDelegate = "1.6.0"
+
     const val junit = "4.13.2"
     const val androidTestJUnit = "1.1.5"
     const val androidTestEspresso = "3.5.1"
@@ -17,8 +19,11 @@ object Versions {
     const val okHttp = "4.9.0"
 
     const val coroutines = "1.6.1"
+    const val coroutineLifecycleScope = "2.5.1"
 
     const val glide = "4.12.0"
+
+    const val chuckDebug = "3.5.2"
 }
 
 object ConfigData {
@@ -44,6 +49,10 @@ object Deps {
     const val androidTestEspresso = "androidx.test.espresso:espresso-core:${Versions.androidTestEspresso}"
 }
 
+object ViewModelDelegate {
+    const val viewModelDelegate = "androidx.activity:activity-ktx:${Versions.viewModelDelegate}"
+}
+
 object Hilt {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
@@ -60,9 +69,17 @@ object Coroutines {
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     const val coroutineAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    const val lifecycleViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.coroutineLifecycleScope}"
+    const val lifeCycleRuntime =
+        "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.coroutineLifecycleScope}"
 }
 
 object Glide {
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val annotationProcessor = "com.github.bumptech.glide:compiler:${Versions.glide}"
+}
+
+object Chucker {
+    const val chuckerDebug = "com.github.chuckerteam.chucker:library:${Versions.chuckDebug}"
 }
